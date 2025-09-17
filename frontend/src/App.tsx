@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Category, Item, Review, User } from './types';
+import type { Category, Item, Review, User } from './types';
 import { createItem, createReview, createUser, getItemReviews, listItems } from './api';
 
 const categories: Category[] = ['TECH','FASHION','BEAUTY','FOOD','ENTERTAINMENT','SPORTS','OTHER'];

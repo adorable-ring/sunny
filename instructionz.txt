@@ -1,0 +1,13 @@
+Application startup:
+1. Start Backend
+- cd into 'sunlight'
+- on Windows, run .\mvnw spring-boot:run  
+
+2. Start Frontend:
+- cd into 'frontend'
+- run 'npm run dev'
+
+Application notes
+
+17/09/2025
+- If changes have been made in the frontend regarding npm packages, run 'npm i' before 'npm run dev'
