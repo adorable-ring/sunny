@@ -7,13 +7,17 @@ export interface MediaAsset {
 }
 
 export type Category =
-  | 'TECH'
-  | 'FASHION'
-  | 'BEAUTY'
-  | 'FOOD'
-  | 'ENTERTAINMENT'
-  | 'SPORTS'
-  | 'OTHER';
+  | 'Chips'
+  | 'Chocolate'
+  | 'Candies'
+  | 'Beverages'
+  | 'Jellies'
+  | 'Gum'
+  | 'Mints'
+  | 'Cookies'
+  | 'Pastries'
+  | 'Ice Cream'
+  | 'Other';
 
 export interface User {
   id?: number;

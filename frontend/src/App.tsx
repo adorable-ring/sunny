@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Category, Item, Review, User } from './types';
 import { createItem, createReview, createUser, getItemReviews, listItems } from './api';
 
-const categories: Category[] = ['TECH','FASHION','BEAUTY','FOOD','ENTERTAINMENT','SPORTS','OTHER'];
+const categories: Category[] = ['Chips','Chocolate','Candies','Beverages','Jellies','Gum','Mints','Cookies','Pastries','Ice Cream','Other'];
 
 function Section(props: { title: string; children: React.ReactNode }) {
   return (
@@ -38,7 +38,7 @@ function UserForm({ onCreated }: { onCreated: (u: User)=>void }) {
     <form onSubmit={submit} className="card">
       <h3>Create User</h3>
       <label>Username</label>
-      <input value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="coolkid123" required />
+      <input value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="coolsnack" required />
       <label style={{marginTop:8}}>Email</label>
       <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@example.com" required />
       <div className="actions" style={{marginTop:10}}><button className="primary" type="submit">Create</button></div>
@@ -49,7 +49,7 @@ function UserForm({ onCreated }: { onCreated: (u: User)=>void }) {
 function ItemForm({ onCreated }: { onCreated: (i: Item)=>void }) {
   const [title,setTitle] = useState('');
   const [description,setDescription] = useState('');
-  const [category,setCategory] = useState<Category>('TECH');
+  const [category,setCategory] = useState<Category>('Beverages');
   const [mediaUrls,setMediaUrls] = useState<string[]>(['','','']);
   const [mediaTypes,setMediaTypes] = useState<Array<'IMAGE'|'VIDEO'>>(['IMAGE','IMAGE','IMAGE']);
 
@@ -66,11 +66,11 @@ function ItemForm({ onCreated }: { onCreated: (i: Item)=>void }) {
 
   return (
     <form onSubmit={submit} className="card">
-      <h3>Create Item</h3>
+      <h3>Create Snack</h3>
       <div className="row">
         <div>
           <label>Title</label>
-          <input value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Product name" required />
+          <input value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Snack/Product name" required />
         </div>
         <div>
           <label>Category</label>
@@ -80,7 +80,7 @@ function ItemForm({ onCreated }: { onCreated: (i: Item)=>void }) {
         </div>
       </div>
       <label style={{marginTop:8}}>Description</label>
-      <textarea rows={3} value={description} onChange={(e)=>setDescription(e.target.value)} placeholder="What is this item about?" />
+      <textarea rows={3} value={description} onChange={(e)=>setDescription(e.target.value)} placeholder="What is this snack?" />
       <div className="hr" />
       <h4>Media (up to 3)</h4>
       <div className="row">
@@ -201,8 +201,8 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1>Gen Z Reviews</h1>
-      <p style={{color:'#9ca3af'}}>Create users, items, and reviews. Browse items by category.</p>
+      <h1>Snack Reviews</h1>
+      <p style={{color:'#9ca3af'}}>Create users, snacks, and reviews. Browse snacks by category.</p>
 
       <div className="row" style={{marginTop:12}}>
         <UserForm onCreated={(u)=> setUsers(prev=> [...prev, u])} />

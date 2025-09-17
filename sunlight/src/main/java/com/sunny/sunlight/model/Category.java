@@ -1,5 +1,5 @@
 package com.sunny.sunlight.model;
 
 public enum Category {
-	TECH, FASHION, BEAUTY, FOOD, ENTERTAINMENT, SPORTS, OTHER
+	Chips, Chocolate, Candy, Beverages, Jelly, Gum, Mints, Cookies, Pastries, Other
 }
